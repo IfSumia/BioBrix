@@ -16,7 +16,7 @@
     "@type": "Organization",
     "name": "Biobrix",
     "url": "https://www.biobrix.io",
-    "logo": "https://www.biobrix.io/biobrix_logo_4_1_aspect_whitebg.png",
+    "logo": "https://www.biobrix.io/biobrix-logo_3_1_blackbg.png",
     "description": "Biobrix is a biotech startup based in Paris that uses AI and cell morphology data for drug discovery.",
     "sameAs": [
       "https://www.linkedin.com/company/biobrixtherapeutics"
@@ -79,13 +79,16 @@
       z-index: 2;
     }
 
+    /* Logo Section Styles */
     .logo {
-      position: absolute;
-      top: 30px;
-      left: 30px;
-      width: 180px;
+      text-align: center;
+      margin-top: 60px;
+    }
+
+    .logo img {
+      max-width: 300px;
+      width: 80%;
       height: auto;
-      z-index: 3;
     }
 
     h1 {
@@ -165,9 +168,13 @@
     Biobrix: AI-powered Biotech Startup in Paris using Cell Morphology for Drug Discovery
   </h1>
 
+  <!-- Logo Section -->
+  <div class="logo">
+    <img src="lab-photo/biobrix-logo.png" alt="Biobrix Logo" />
+  </div>
+
   <header>
     <div class="overlay"></div>
-    <img src="biobrix_logo_4_1_aspect_whitebg.png" alt="Biobrix Logo" class="logo">
     <div class="lang-toggle" onclick="toggleLanguage()">FR</div>
     <div class="hero-content">
       <h1 data-en="Reimagining Drug Discovery with AI" data-fr="Réinventer la découverte de médicaments avec l'IA">Reimagining Drug Discovery with AI</h1>
