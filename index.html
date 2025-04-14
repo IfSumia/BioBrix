@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Biobrix | AI-Driven Drug Discovery</title>
+  <meta name="description" content="Biobrix is a Paris-based biotech startup using AI and cell morphology to revolutionize drug discovery." />
+  <meta name="keywords" content="biotech startup, Paris, drug discovery, AI, cell morphology, morphological profiling, Biobrix, AI medicine, biotech France" />
+  <meta name="robots" content="index, follow" />
+  <meta name="author" content="Biobrix" />
+  <link rel="canonical" href="https://www.biobrix.io" />
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Biobrix",
+    "url": "https://www.biobrix.io",
+    "logo": "https://www.biobrix.io/biobrix-logo.png",
+    "description": "Biobrix is a biotech startup based in Paris that uses AI and cell morphology data for drug discovery.",
+    "sameAs": [
+      "https://www.linkedin.com/company/biobrix"
+    ],
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "59 RUE DE PONTHIEU",
+      "addressLocality": "Paris",
+      "postalCode": "75008",
+      "addressCountry": "France"
+    }
+  }
+  </script>
+
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Space+Grotesk:wght@500&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background: linear-gradient(180deg, #0a0a0a 0%, #111 100%);
+      color: #f5f5f5;
+      overflow-x: hidden;
+    }
+
+    header {
+      position: relative;
+      width: 100%;
+      height: 100vh;
+      background: url('lab-photo.png') center/cover no-repeat;
+      filter: brightness(0.4);
+    }
+
+    .hero-content {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      text-align: center;
+      max-width: 90%;
+      opacity: 0;
+      animation: fadeIn 2s ease-in-out forwards;
+    }
+
+    .logo {
+      position: absolute;
+      top: 30px;
+      left: 30px;
+      width: 120px;
+      z-index: 10;
+    }
+
+    h1 {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 3rem;
+      color: #ff4fc8;
+      margin-bottom: 1rem;
+    }
+
+    h2 {
+      font-family: 'Space Grotesk', sans-serif;
+    }
+
+    p {
+      font-size: 1.2rem;
+      color: #ccc;
+      margin-bottom: 2rem;
+    }
+
+    .cta {
+      display: inline-block;
+      padding: 0.8rem 2rem;
+      border: 2px solid #ff4fc8;
+      color: #ff4fc8;
+      text-decoration: none;
+      font-weight: bold;
+      transition: all 0.3s;
+      border-radius: 5px;
+    }
+
+    .cta:hover {
+      background-color: #ff4fc8;
+      color: #0a0a0a;
+    }
+
+    section {
+      padding: 4rem 2rem;
+      max-width: 800px;
+      margin: auto;
+      text-align: center;
+      opacity: 0;
+      transform: translateY(40px);
+      transition: all 1s ease-out;
+    }
+
+    section.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    footer {
+      text-align: center;
+      padding: 2rem;
+      color: #666;
+      font-size: 0.9rem;
+    }
+
+    .lang-toggle {
+      position: absolute;
+      top: 30px;
+      right: 30px;
+      color: #ff4fc8;
+      font-weight: bold;
+      cursor: pointer;
+      z-index: 10;
+    }
+
+    @keyframes fadeIn {
+      to {
+        opacity: 1;
+      }
+    }
+  </style>
+</head>
+<body>
+  <h1 style="display: none;">
+    Biobrix: AI-powered Biotech Startup in Paris using Cell Morphology for Drug Discovery
+  </h1>
+
+  <header>
+    <img src="biobrix-logo.png" alt="Biobrix Logo" class="logo">
+    <div class="lang-toggle" onclick="toggleLanguage()">FR</div>
+    <div class="hero-content">
+      <h1 data-en="Reimagining Drug Discovery with AI" data-fr="Réinventer la découverte de médicaments avec l'IA">Reimagining Drug Discovery with AI</h1>
+      <p data-en="We merge machine learning with biology to accelerate the path from molecule to medicine." data-fr="Nous combinons l'apprentissage automatique avec la biologie pour accélérer le chemin du médicament.">We merge machine learning with biology to accelerate the path from molecule to medicine.</p>
+      <a href="#about" class="cta" data-en="Learn More" data-fr="En savoir plus">Learn More</a>
+    </div>
+  </header>
+
+  <section id="about">
+    <h2 data-en="About Biobrix" data-fr="À propos de Biobrix">About Biobrix</h2>
+    <p data-en="Biobrix is an AI-driven biotech startup redefining how therapies are discovered. We use morphological profiling — analyzing cell images — to identify promising compounds faster, smarter, and more precisely."
+       data-fr="Biobrix est une start-up biotechnologique alimentée par l'IA qui redéfinit la découverte de nouvelles thérapies. Nous utilisons le profilage morphologique — l'analyse des images cellulaires — pour identifier des composés prometteurs plus rapidement et plus intelligemment.">
+       Biobrix is an AI-driven biotech startup redefining how therapies are discovered. We use morphological profiling — analyzing cell images — to identify promising compounds faster, smarter, and more precisely.
+    </p>
+  </section>
+
+  <section id="contact">
+    <h2 data-en="Contact Us" data-fr="Contactez-nous">Contact Us</h2>
+    <p data-en="Interested in partnering, investing, or joining our mission?"
+       data-fr="Intéressé(e) par un partenariat, un investissement ou nous rejoindre ?">
+       Interested in partnering, investing, or joining our mission?
+    </p>
+    <p>Email: <a href="mailto:hello@biobrix.io" style="color: #ff4fc8;">hello@biobrix.io</a></p>
+    <p><a href="https://www.linkedin.com/company/biobrix" target="_blank" style="color: #ff4fc8;">Follow us on LinkedIn</a></p>
+  </section>
+
+  <footer>
+    &copy; 2025 Biobrix. All rights reserved.<br />
+    59 RUE DE PONTHIEU, 75008 PARIS, France
+  </footer>
+
+  <script>
+    // Scroll animation logic
+    const sections = document.querySelectorAll('section');
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    }, { threshold: 0.1 });
+
+    sections.forEach(section => observer.observe(section));
+
+    // Multilingual toggle
+    function toggleLanguage() {
+      const toggle = document.querySelector('.lang-toggle');
+      const isEnglish = toggle.textContent === 'FR';
+      toggle.textContent = isEnglish ? 'EN' : 'FR';
+      document.querySelectorAll('[data-en]').forEach(el => {
+        el.textContent = isEnglish ? el.getAttribute('data-fr') : el.getAttribute('data-en');
+      });
+    }
+  </script>
+</body>
+</html>
