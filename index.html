@@ -161,6 +161,101 @@
         opacity: 1;
       }
     }
+
+    /* 3D Cube Animation Styles */
+    .cube-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 200px;
+      perspective: 800px;
+      margin: 2rem auto;
+    }
+
+    .cube {
+      position: relative;
+      width: 100px;
+      height: 100px;
+      transform-style: preserve-3d;
+      animation: rotate 15s infinite linear;
+    }
+
+    .cube-face {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      font-family: monospace;
+      font-size: 10px;
+      line-height: 10px;
+      white-space: pre;
+      color: #ffffff;
+      background-color: rgba(255, 79, 200, 0.8);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border: 1px solid white;
+      text-shadow: 0 0 5px rgba(255, 255, 255, 0.5);
+    }
+
+    .cube-face:nth-child(1) { transform: translateZ(50px); }
+    .cube-face:nth-child(2) { transform: rotateY(180deg) translateZ(50px); }
+    .cube-face:nth-child(3) { transform: rotateY(90deg) translateZ(50px); }
+    .cube-face:nth-child(4) { transform: rotateY(-90deg) translateZ(50px); }
+    .cube-face:nth-child(5) { transform: rotateX(90deg) translateZ(50px); }
+    .cube-face:nth-child(6) { transform: rotateX(-90deg) translateZ(50px); }
+
+    @keyframes rotate {
+      0% { transform: rotateX(0) rotateY(0); }
+      100% { transform: rotateX(360deg) rotateY(360deg); }
+    }
+
+    /* Team Section Styles */
+    .team-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 2rem;
+      margin-top: 2rem;
+    }
+
+    .team-member {
+      width: 250px;
+      text-align: center;
+      transition: transform 0.3s;
+    }
+
+    .team-member:hover {
+      transform: translateY(-10px);
+    }
+
+    .member-image {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 3px solid #ff4fc8;
+      margin-bottom: 1rem;
+      background-color: #222;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 3rem;
+      color: #ff4fc8;
+      margin: 0 auto 1rem;
+    }
+
+    .member-name {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 1.2rem;
+      color: #ff4fc8;
+      margin-bottom: 0.5rem;
+    }
+
+    .member-title {
+      color: #ccc;
+      font-size: 0.9rem;
+      margin-bottom: 1rem;
+    }
   </style>
 </head>
 <body>
@@ -186,9 +281,71 @@
   <section id="about">
     <h2 data-en="About Biobrix" data-fr="À propos de Biobrix">About Biobrix</h2>
     <p data-en="Biobrix is a young and ambitious AI-driven biotech startup reimagining how therapies are discovered. We combine cell images, chemical structures, and other biological data to accelerate drug discovery with precision and agility."
-       data-fr="Biobrix est une jeune start-up biotechnologique ambitieuse, fondée sur l’IA, qui réinvente la découverte de nouvelles thérapies. Nous combinons des images cellulaires, des structures chimiques et d’autres données biologiques pour accélérer la découverte de médicaments avec précision et agilité.">
+       data-fr="Biobrix est une jeune start-up biotechnologique ambitieuse, fondée sur l'IA, qui réinvente la découverte de nouvelles thérapies. Nous combinons des images cellulaires, des structures chimiques et d'autres données biologiques pour accélérer la découverte de médicaments avec précision et agilité.">
        Biobrix is an AI-driven biotech startup redefining how therapies are discovered. We use morphological profiling — analyzing cell images — to identify promising compounds faster, smarter, and more precisely.
     </p>
+  </section>
+
+  <!-- 3D Cube Animation Section -->
+  <div class="cube-container">
+    <div class="cube">
+      <div class="cube-face">BIOBRIX BIOBRIX
+BIOBRIX BIOBRIX
+BIOBRIX BIOBRIX
+BIOBRIX BIOBRIX</div>
+      <div class="cube-face">AI+BIO AI+BIO
+AI+BIO AI+BIO
+AI+BIO AI+BIO
+AI+BIO AI+BIO</div>
+      <div class="cube-face">DATA DATA DATA
+DATA DATA DATA
+DATA DATA DATA
+DATA DATA DATA</div>
+      <div class="cube-face">CELLS CELLS
+CELLS CELLS
+CELLS CELLS
+CELLS CELLS</div>
+      <div class="cube-face">DISCOVER TECH
+DISCOVER TECH
+DISCOVER TECH
+DISCOVER TECH</div>
+      <div class="cube-face">FUTURE FUTURE
+FUTURE FUTURE
+FUTURE FUTURE
+FUTURE FUTURE</div>
+    </div>
+  </div>
+
+  <!-- Team Section -->
+  <section id="team">
+    <h2 data-en="Our Team" data-fr="Notre Équipe">Our Team</h2>
+    <p data-en="Meet the innovative minds behind Biobrix's mission to transform drug discovery."
+       data-fr="Découvrez les esprits innovants derrière la mission de Biobrix de transformer la découverte de médicaments.">
+       Meet the innovative minds behind Biobrix's mission to transform drug discovery.
+    </p>
+    
+    <div class="team-container">
+      <div class="team-member">
+        <div class="member-image">JP</div>
+        <h3 class="member-name">Dr. Jean Patel</h3>
+        <p class="member-title">CEO & Co-founder</p>
+        <p>PhD in Computational Biology with 10+ years in pharma R&D</p>
+      </div>
+      
+      <div class="team-member">
+        <div class="member-image">SL</div>
+        <h3 class="member-name">Dr. Sophie Laurent</h3>
+        <p class="member-title">CSO & Co-founder</p>
+        <p>Expert in cell imaging and high-content screening</p>
+      </div>
+      
+      <div class="team-member">
+        <div class="member-image">MB</div>
+        <h3 class="member-name">Marc Bertrand</h3>
+        <p class="member-title">CTO</p>
+        <p>AI specialist with focus on computer vision and deep learning</p>
+      </div>
+    </div>
   </section>
 
   <section id="contact">
@@ -228,6 +385,15 @@
         el.textContent = isEnglish ? el.getAttribute('data-fr') : el.getAttribute('data-en');
       });
     }
+
+    // ASCII art for cube faces
+    document.addEventListener('DOMContentLoaded', function() {
+      // This ensures the cube faces are properly formatted
+      const faces = document.querySelectorAll('.cube-face');
+      faces.forEach(face => {
+        face.style.fontFamily = 'monospace';
+      });
+    });
   </script>
 </body>
 </html>
