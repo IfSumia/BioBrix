@@ -163,52 +163,55 @@
     }
 
     /* 3D Cube Animation Styles */
+    /* Updated 3D Cube Animation Styles */
     .cube-container {
       display: flex;
       justify-content: center;
       align-items: center;
-      height: 200px;
-      perspective: 800px;
-      margin: 2rem auto;
+      height: 300px;
+      perspective: 1000px;
+      margin: 3rem auto;
     }
-
+    
     .cube {
       position: relative;
-      width: 100px;
-      height: 100px;
+      width: 150px;
+      height: 150px;
       transform-style: preserve-3d;
-      animation: rotate 15s infinite linear;
+      animation: rotate 20s infinite linear;
     }
-
+    
     .cube-face {
       position: absolute;
       width: 100%;
       height: 100%;
-      font-family: monospace;
-      font-size: 10px;
-      line-height: 10px;
-      white-space: pre;
-      color: #ffffff;
-      background-color: rgba(255, 79, 200, 0.8);
+      background-color: transparent;
       display: flex;
       justify-content: center;
       align-items: center;
-      border: 1px solid white;
-      text-shadow: 0 0 5px rgba(255, 255, 255, 0.5);
+      border: none;
+      font-family: monospace;
+      font-size: 6px;
+      line-height: 7px;
+      white-space: pre-wrap;
+      color: white;
+      padding: 5px;
+      overflow: hidden;
+      text-shadow: 0 0 2px rgba(255, 79, 200, 0.8);
     }
-
-    .cube-face:nth-child(1) { transform: translateZ(50px); }
-    .cube-face:nth-child(2) { transform: rotateY(180deg) translateZ(50px); }
-    .cube-face:nth-child(3) { transform: rotateY(90deg) translateZ(50px); }
-    .cube-face:nth-child(4) { transform: rotateY(-90deg) translateZ(50px); }
-    .cube-face:nth-child(5) { transform: rotateX(90deg) translateZ(50px); }
-    .cube-face:nth-child(6) { transform: rotateX(-90deg) translateZ(50px); }
-
+    
+    .cube-face:nth-child(1) { transform: translateZ(75px); }
+    .cube-face:nth-child(2) { transform: rotateY(180deg) translateZ(75px); }
+    .cube-face:nth-child(3) { transform: rotateY(90deg) translateZ(75px); }
+    .cube-face:nth-child(4) { transform: rotateY(-90deg) translateZ(75px); }
+    .cube-face:nth-child(5) { transform: rotateX(90deg) translateZ(75px); }
+    .cube-face:nth-child(6) { transform: rotateX(-90deg) translateZ(75px); }
+    
     @keyframes rotate {
       0% { transform: rotateX(0) rotateY(0); }
       100% { transform: rotateX(360deg) rotateY(360deg); }
     }
-
+    
     /* Team Section Styles */
     .team-container {
       display: flex;
@@ -285,36 +288,26 @@
        Biobrix is an AI-driven biotech startup redefining how therapies are discovered. We use morphological profiling — analyzing cell images — to identify promising compounds faster, smarter, and more precisely.
     </p>
   </section>
-
+  
   <!-- 3D Cube Animation Section -->
+
   <div class="cube-container">
-    <div class="cube">
-      <div class="cube-face">BIOBRIX BIOBRIX
-BIOBRIX BIOBRIX
-BIOBRIX BIOBRIX
-BIOBRIX BIOBRIX</div>
-      <div class="cube-face">AI+BIO AI+BIO
-AI+BIO AI+BIO
-AI+BIO AI+BIO
-AI+BIO AI+BIO</div>
-      <div class="cube-face">DATA DATA DATA
-DATA DATA DATA
-DATA DATA DATA
-DATA DATA DATA</div>
-      <div class="cube-face">CELLS CELLS
-CELLS CELLS
-CELLS CELLS
-CELLS CELLS</div>
-      <div class="cube-face">DISCOVER TECH
-DISCOVER TECH
-DISCOVER TECH
-DISCOVER TECH</div>
-      <div class="cube-face">FUTURE FUTURE
-FUTURE FUTURE
-FUTURE FUTURE
-FUTURE FUTURE</div>
-    </div>
+  <div class="cube">
+    <div class="cube-face">Cell painting is a high-content image-based assay developed for morphological profiling, a computational method for quantifying phenotypic effects of perturbations. In cell painting, cells are stained with multiple fluorescent dyes to label key cellular components including nuclei, endoplasmic reticulum, mitochondria, cytoskeleton, Golgi apparatus, and RNA. Microscopy images of the labeled cells are then analyzed using computer vision algorithms to extract hundreds or even thousands of morphological features, creating unique fingerprints or profiles.</div>
+    
+    <div class="cube-face">Morphological profiling provides researchers with a powerful approach to characterize complex cellular phenotypes in an unbiased manner. This technique enables identification of gene function, target identification, and mechanism of action studies for small molecules. By using machine learning algorithms to analyze the high-dimensional data produced through cell painting, researchers can identify patterns and relationships that would be impossible to detect through traditional methods.</div>
+    
+    <div class="cube-face">Cell Painting has become a powerful phenotypic screening approach in drug discovery. The technique measures morphological changes in cells through fluorescent stains targeting different organelles, generating rich datasets. These datasets can be used to identify compounds with similar mechanisms of action, repurpose existing drugs for new indications, predict compounds' mechanism of action based on morphological signatures, and assess toxicity profiles early in drug development.</div>
+    
+    <div class="cube-face">The technology behind morphological profiling has evolved rapidly. Modern approaches combine high-content imaging with advanced computational methods including deep learning neural networks. Convolutional neural networks can extract features directly from cell images without requiring predefined features. This increases sensitivity and allows the detection of subtle phenotypic changes that might be missed by traditional image analysis pipelines.</div>
+    
+    <div class="cube-face">The origins of cell painting can be traced back to early work in cytological profiling. In 2004, researchers at Harvard developed a method using three fluorescent dyes to profile drug effects. This evolved into the modern cell painting assay which uses six stains across five channels to visualize eight cellular components. The approach was formalized in protocols published by the Broad Institute, establishing standards for implementation across laboratories worldwide.</div>
+    
+    <div class="cube-face">AI-driven analysis of cell painting data is transforming drug discovery. Machine learning algorithms can classify compounds based on their morphological effects, cluster compounds with similar mechanisms, and even predict biological activity from image-based profiles. These approaches are particularly valuable for identifying the mechanisms of action for compounds identified in phenotypic screens, and for repurposing existing drugs for new therapeutic applications.</div>
   </div>
+</div>
+
+  
 
   <!-- Team Section -->
   <section id="team">
