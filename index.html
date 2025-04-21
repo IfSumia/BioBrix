@@ -215,9 +215,6 @@
     .cube-face:nth-child(5) { transform: rotateX(90deg) translateZ(75px); }
     .cube-face:nth-child(6) { transform: rotateX(-90deg) translateZ(75px); }
 
-  
-    
-    
     /* Team Section Styles */
     .team-container {
       display: flex;
@@ -251,6 +248,38 @@
       font-size: 3rem;
       color: #ff4fc8;
       margin: 0 auto 1rem;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .member-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+
+    .member-image .placeholder {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 3rem;
+      color: #ff4fc8;
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+
+    .member-image img[src=""] {
+      display: none;
+    }
+
+    .member-image img:not([src=""]):not([src*="undefined"]) + .placeholder {
+      display: none;
     }
 
     .member-name {
@@ -299,22 +328,20 @@
   <!-- 3D Cube Animation Section -->
 
   <div class="cube-container">
-  <div class="cube">
-    <div class="cube-face">Cell painting is a high-content image-based assay developed for morphological profiling, a computational method for quantifying phenotypic effects of perturbations. In cell painting, cells are stained with multiple fluorescent dyes to label key cellular components including nuclei, endoplasmic reticulum, mitochondria, cytoskeleton, Golgi apparatus, and RNA. Microscopy images of the labeled cells are then analyzed using computer vision algorithms to extract hundreds or even thousands of morphological features, creating unique fingerprints or profiles.Cell painting is a high-content image-based assay developed for morphological profiling, a computational method for quantifying phenotypic effects of perturbations. In cell painting, cells are stained with multiple fluorescent dyes to label key cellular components including nuclei, endoplasmic reticulum, mitochondria, cytoskeleton, Golgi apparatus, and RNA. Microscopy images of the labeled cells are then analyzed using computer vision algorithms to extract hundreds or even thousands of morphological features, creating unique fingerprints or profiles.</div>
-    
-    <div class="cube-face">Morphological profiling provides researchers with a powerful approach to characterize complex cellular phenotypes in an unbiased manner. This technique enables identification of gene function, target identification, and mechanism of action studies for small molecules. By using machine learning algorithms to analyze the high-dimensional data produced through cell painting, researchers can identify patterns and relationships that would be impossible to detect through traditional methods.Morphological profiling provides researchers with a powerful approach to characterize complex cellular phenotypes in an unbiased manner. This technique enables identification of gene function, target identification, and mechanism of action studies for small molecules. By using machine learning algorithms to analyze the high-dimensional data produced through cell painting, researchers can identify patterns and relationships that would be impossible to detect through traditional methods.</div>
-    
-    <div class="cube-face">Cell Painting has become a powerful phenotypic screening approach in drug discovery. The technique measures morphological changes in cells through fluorescent stains targeting different organelles, generating rich datasets. These datasets can be used to identify compounds with similar mechanisms of action, repurpose existing drugs for new indications, predict compounds' mechanism of action based on morphological signatures, and assess toxicity profiles early in drug development.Cell Painting has become a powerful phenotypic screening approach in drug discovery. The technique measures morphological changes in cells through fluorescent stains targeting different organelles, generating rich datasets. These datasets can be used to identify compounds with similar mechanisms of action, repurpose existing drugs for new indications, predict compounds' mechanism of action based on morphological signatures, and assess toxicity profiles early in drug development.</div>
-    
-    <div class="cube-face">The technology behind morphological profiling has evolved rapidly. Modern approaches combine high-content imaging with advanced computational methods including deep learning neural networks. Convolutional neural networks can extract features directly from cell images without requiring predefined features. This increases sensitivity and allows the detection of subtle phenotypic changes that might be missed by traditional image analysis pipelines. The technology behind morphological profiling has evolved rapidly. Modern approaches combine high-content imaging with advanced computational methods including deep learning neural networks. Convolutional neural networks can extract features directly from cell images without requiring predefined features. This increases sensitivity and allows the detection of subtle phenotypic changes that might be missed by traditional image analysis pipelines.</div>
-    
-    <div class="cube-face">The origins of cell painting can be traced back to early work in cytological profiling. In 2004, researchers at Harvard developed a method using three fluorescent dyes to profile drug effects. This evolved into the modern cell painting assay which uses six stains across five channels to visualize eight cellular components. The approach was formalized in protocols published by the Broad Institute, establishing standards for implementation across laboratories worldwide. The origins of cell painting can be traced back to early work in cytological profiling. In 2004, researchers at Harvard developed a method using three fluorescent dyes to profile drug effects. This evolved into the modern cell painting assay which uses six stains across five channels to visualize eight cellular components. The approach was formalized in protocols published by the Broad Institute, establishing standards for implementation across laboratories worldwide.</div>
-    
-    <div class="cube-face">AI-driven analysis of cell painting data is transforming drug discovery. Machine learning algorithms can classify compounds based on their morphological effects, cluster compounds with similar mechanisms, and even predict biological activity from image-based profiles. These approaches are particularly valuable for identifying the mechanisms of action for compounds identified in phenotypic screens, and for repurposing existing drugs for new therapeutic applications. AI-driven analysis of cell painting data is transforming drug discovery. Machine learning algorithms can classify compounds based on their morphological effects, cluster compounds with similar mechanisms, and even predict biological activity from image-based profiles. These approaches are particularly valuable for identifying the mechanisms of action for compounds identified in phenotypic screens, and for repurposing existing drugs for new therapeutic applications.</div>
+    <div class="cube">
+      <div class="cube-face">Cell painting is a high-content image-based assay developed for morphological profiling, a computational method for quantifying phenotypic effects of perturbations. In cell painting, cells are stained with multiple fluorescent dyes to label key cellular components including nuclei, endoplasmic reticulum, mitochondria, cytoskeleton, Golgi apparatus, and RNA. Microscopy images of the labeled cells are then analyzed using computer vision algorithms to extract hundreds or even thousands of morphological features, creating unique fingerprints or profiles.Cell painting is a high-content image-based assay developed for morphological profiling, a computational method for quantifying phenotypic effects of perturbations. In cell painting, cells are stained with multiple fluorescent dyes to label key cellular components including nuclei, endoplasmic reticulum, mitochondria, cytoskeleton, Golgi apparatus, and RNA. Microscopy images of the labeled cells are then analyzed using computer vision algorithms to extract hundreds or even thousands of morphological features, creating unique fingerprints or profiles.</div>
+      
+      <div class="cube-face">Morphological profiling provides researchers with a powerful approach to characterize complex cellular phenotypes in an unbiased manner. This technique enables identification of gene function, target identification, and mechanism of action studies for small molecules. By using machine learning algorithms to analyze the high-dimensional data produced through cell painting, researchers can identify patterns and relationships that would be impossible to detect through traditional methods.Morphological profiling provides researchers with a powerful approach to characterize complex cellular phenotypes in an unbiased manner. This technique enables identification of gene function, target identification, and mechanism of action studies for small molecules. By using machine learning algorithms to analyze the high-dimensional data produced through cell painting, researchers can identify patterns and relationships that would be impossible to detect through traditional methods.</div>
+      
+      <div class="cube-face">Cell Painting has become a powerful phenotypic screening approach in drug discovery. The technique measures morphological changes in cells through fluorescent stains targeting different organelles, generating rich datasets. These datasets can be used to identify compounds with similar mechanisms of action, repurpose existing drugs for new indications, predict compounds' mechanism of action based on morphological signatures, and assess toxicity profiles early in drug development.Cell Painting has become a powerful phenotypic screening approach in drug discovery. The technique measures morphological changes in cells through fluorescent stains targeting different organelles, generating rich datasets. These datasets can be used to identify compounds with similar mechanisms of action, repurpose existing drugs for new indications, predict compounds' mechanism of action based on morphological signatures, and assess toxicity profiles early in drug development.</div>
+      
+      <div class="cube-face">The technology behind morphological profiling has evolved rapidly. Modern approaches combine high-content imaging with advanced computational methods including deep learning neural networks. Convolutional neural networks can extract features directly from cell images without requiring predefined features. This increases sensitivity and allows the detection of subtle phenotypic changes that might be missed by traditional image analysis pipelines. The technology behind morphological profiling has evolved rapidly. Modern approaches combine high-content imaging with advanced computational methods including deep learning neural networks. Convolutional neural networks can extract features directly from cell images without requiring predefined features. This increases sensitivity and allows the detection of subtle phenotypic changes that might be missed by traditional image analysis pipelines.</div>
+      
+      <div class="cube-face">The origins of cell painting can be traced back to early work in cytological profiling. In 2004, researchers at Harvard developed a method using three fluorescent dyes to profile drug effects. This evolved into the modern cell painting assay which uses six stains across five channels to visualize eight cellular components. The approach was formalized in protocols published by the Broad Institute, establishing standards for implementation across laboratories worldwide. The origins of cell painting can be traced back to early work in cytological profiling. In 2004, researchers at Harvard developed a method using three fluorescent dyes to profile drug effects. This evolved into the modern cell painting assay which uses six stains across five channels to visualize eight cellular components. The approach was formalized in protocols published by the Broad Institute, establishing standards for implementation across laboratories worldwide.</div>
+      
+      <div class="cube-face">AI-driven analysis of cell painting data is transforming drug discovery. Machine learning algorithms can classify compounds based on their morphological effects, cluster compounds with similar mechanisms, and even predict biological activity from image-based profiles. These approaches are particularly valuable for identifying the mechanisms of action for compounds identified in phenotypic screens, and for repurposing existing drugs for new therapeutic applications. AI-driven analysis of cell painting data is transforming drug discovery. Machine learning algorithms can classify compounds based on their morphological effects, cluster compounds with similar mechanisms, and even predict biological activity from image-based profiles. These approaches are particularly valuable for identifying the mechanisms of action for compounds identified in phenotypic screens, and for repurposing existing drugs for new therapeutic applications.</div>
+    </div>
   </div>
-</div>
-
-  
 
   <!-- Team Section -->
   <section id="team">
@@ -326,23 +353,32 @@
     
     <div class="team-container">
       <div class="team-member">
-        <div class="member-image">IS</div>
+        <div class="member-image">
+          <img src="photos/Iffat_photo.png" alt="Iffat Sumia, PhD" onerror="this.style.display='none'">
+          <div class="placeholder">IS</div>
+        </div>
         <h3 class="member-name">Iffat Sumia Khader, PhD</h3>
         <p class="member-title">CEO & Co-founder</p>
         <p>PhD in Cell Biology with 10+ years in R&D</p>
       </div>
       
       <div class="team-member">
-        <div class="member-image">MP</div>
+        <div class="member-image">
+          <img src="photos/Mathieu_photo.jpg" alt="Mathieu Pellouais" onerror="this.style.display='none'">
+          <div class="placeholder">MP</div>
+        </div>
         <h3 class="member-name">Mathieu Pellouais</h3>
-        <p class="member-title">Associate</p>
+        <p class="member-title">AI Research Engineer</p>
         <p>AI specialist with focus on deep learning</p>
       </div>
 
       <div class="team-member">
-        <div class="member-image">AS</div>
+        <div class="member-image">
+          <img src="photos/Ahmed_photo.png" alt="Ahmed Shahbaz" onerror="this.style.display='none'">
+          <div class="placeholder">AS</div>
+        </div>
         <h3 class="member-name">Ahmed Shahbaz</h3>
-        <p class="member-title"> Co-founder</p>
+        <p class="member-title">Co-founder</p>
         <p>Software Engineer and Programming Expert</p>
       </div>
     </div>
@@ -386,12 +422,36 @@
       });
     }
 
-    // ASCII art for cube faces
+    // Additional script to handle image loading errors
     document.addEventListener('DOMContentLoaded', function() {
       // This ensures the cube faces are properly formatted
       const faces = document.querySelectorAll('.cube-face');
       faces.forEach(face => {
         face.style.fontFamily = 'monospace';
+      });
+      
+      // Handle image error cases
+      const memberImages = document.querySelectorAll('.member-image img');
+      memberImages.forEach(img => {
+        img.addEventListener('error', function() {
+          // Show placeholder when image fails to load
+          this.style.display = 'none';
+          this.nextElementSibling.style.display = 'flex';
+        });
+        
+        // If image loads successfully, hide the placeholder
+        img.addEventListener('load', function() {
+          if(this.complete && this.naturalWidth !== 0) {
+            this.style.display = 'block';
+            this.nextElementSibling.style.display = 'none';
+          }
+        });
+        
+        // Check if image is already loaded
+        if(img.complete && img.naturalWidth !== 0) {
+          img.style.display = 'block';
+          img.nextElementSibling.style.display = 'none';
+        }
       });
     });
   </script>
